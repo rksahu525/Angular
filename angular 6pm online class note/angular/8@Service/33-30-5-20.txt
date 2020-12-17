@@ -1,0 +1,39 @@
+Ex: Creating a Service for Data
+
+1. Add a new file into "app" folder
+	             "data.service.ts"
+
+import { Injectable } from '@angular/core';
+
+@Injectable()
+
+export class DataService {
+  GetProducts() {
+      return [
+        {Name: 'Samsung TV', Price: 45000.54, Category: 'Electronics', Photo: 'assets/tv.jpg'},
+        {Name: 'Nike Casuals', Price: 5000.54, Category: 'Footwear', Photo: 'assets/nike.jpg'},
+        {Name: 'Earpods', Price: 15000.54, Category: 'Electronics', Photo: 'assets/earpods.jpg'},
+        {Name: 'Lee Cooper Boot', Price: 6000.54, Category: 'Footwear', Photo: 'assets/shoe1.jpg'},
+    ];
+  }
+}
+2. Register data service
+	"app.module.ts"
+
+        providers: [CaptchaService, DataService],
+
+3. Inject into your component
+    -Goto "productsdata.component.ts"
+
+  import { DataService } from '../data.service';
+ 
+  export class ProductsDataComponent implements OnInit {
+
+    constructor(private productService: DataService){
+    }
+    public data = [];
+    ngOnInit() {
+        this.data = this.productService.GetProducts();
+    }
+     // your component logic...
+  }

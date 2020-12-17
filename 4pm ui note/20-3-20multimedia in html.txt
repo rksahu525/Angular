@@ -1,0 +1,199 @@
+	         Multi Media in HTML
+- Audio, Video and Animations
+- How animations are created for web?
+- Software "Flash"
+- Flash is used for audio, video, games, ads
+
+	                Flash
+- You have to download  "Marcomedia Flash 8"
+        Key :  WPD800-59935-59132-35408
+
+- Open Flash 8 software
+- In Create New category select "Flash Document"
+
+Document Properties
+- Right Click on Document [ Stage ]
+- Select the option "Document Properties"
+
+      width 	        : 550
+      height	        : 400
+      Background Color : White
+      Frame Rate: 25 frames per second
+
+Flash Tools in ToolBox
+===================
+
+Tool		Description
+----------------------------------------------------------------------------
+Selection Tool       It is used to select any portion of
+	              picture to move.
+
+SubSelection Tool   It used to select nodes in image
+		so that you can change the 		shape.
+		- Click on the border of shape
+		- Reshape from nodes.
+Transform tool	It used for change the  size
+		and roate the image.
+		- Stretch
+		- Skew (Tilt)
+		- Rotate
+		- Resize
+Line Tool		It is used to draw straight line
+		- Open Properties so that
+		  you can change size, color
+		 and style of line.
+
+Lasso Tool	It selects a free form portion
+		of picture. It have options
+		a) Polygon lasso
+		b) Magic wand
+
+Pen Tool		It is used for drawing by joining
+		the end points.
+
+Text Tool		It is used to insert text into
+		picture. You can change the font
+		size, color, alignment from
+		properties.
+
+Oval Tool		It is used for drawing circle and
+		oval.
+
+Rectangle		It is used for drawing rectangle
+		and square.
+
+Pencil		It is used for drawing thin lines
+
+Brush		It is used for drawing thick lines
+		with selected brush shape and 		size.
+Paint Bucket	It is used to fill color within an
+		area
+Eraser		It erases a portion of the picture.
+
+Eye Dropper	It is used to pick a color from
+		picture.
+
+
+Creating Animations in Flash:
+========================
+       Flash animations are categorized into 2 types
+
+1. Frame By Frame Animation
+2. Tweening Animation
+
+Frame By Frame Animation
+======================
+1. Double click on layer1
+2. Rename it as "Text"
+3. Insert text into stage from toolbox
+4. Text is present in Frame1
+5. Insert a "KeyFrame" [Duplicate]  - F6 Function Key
+6. Insert KeyFrame again  [F6] and change the size or position or rotate image.
+7. Repeat the steps  [5 and 6] to complete your animation.
+
+To Run your animation 
+- Press Enter Key	:  Run Once
+- Press "Ctrl+Enter" keys : Run continous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frame by Frame Animation
+- Frame   : It is the location where we have to keep
+	and animate any object. [object is in stage                  and controlled from frame for animation]
+
+- Static Frame:  In this the object will continue but
+	         will not have any animation. You can
+	         insert static frame by using "F5" 
+	         function key.
+
+- Key Frame  : In this the object will continue with
+	       animation. You can insert key frame
+	       by using "F6" function key.
+
+Tweening Animation:
+ - In tween animation we have to design only the starting and changing points. 
+ - Flash will design all other frames in between the points automatically.
+ - Tween animation is 2 types
+            a) Motion Tween
+            b) Shape Tween
+ - Motion tween to change position, size, roate.
+ - Shape Tween to change the shape i.e from one object to another.
+
+
+Motion Tween Animation:
+=====================
+1. Draw an object in Frame-1
+2. Goto Frame-15 and press "F6" key frame
+3. Change the position, size or rotation of object at 15 Frame.
+4. Goto Frame-30 and press F6 key frame
+5. Give a new position, size, or rotation at 30 frame.
+6. Continue like this until you complete your animation.
+7. Select all Frames in Layers Panel [Click on layer]
+8. Right Click on the selected frames and select the option
+	"Create Motion Tween"
+		or
+    Goto Properties at the bottom of stange and select
+     "Tween : Motion"
+9. TO Run Press
+	"Ctrl + Enter"
+
+Motion Guide:
+- Motion Guide allows to move any object in specified path.
+- By default object moves in a straight line. You can add motion guide to change the path.
+
+1. Create a new Document
+2. Draw an Object in Frame-1
+3. Goto "Frame-40" and insert Key Frame [F6]
+4. Select all frames and : Create Motion Tween
+5. Right Click on the Layer and Select
+	  "Add Motion Guide"
+6. Goto Guide Layer and draw a path with pencil, brush, circle , rectangle. 
+     [Make sure that it is having a start and end ]
+7. Goto the object layer and keep the object
+    starting position at guide layer start position
+    ending position at guide layer end position
+
+8. Ctrl + Enter to run
+
+Note: Object will not change its direction according to path. Inorder to Change direction according to path. You have to define an attribute "Orient to Path"
+
+- Select the Layer with Motion Tween [ All Layers ]
+- Goto Properties at the botton of stage
+- Select the check box
+	"Orient to Path"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

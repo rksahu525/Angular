@@ -1,0 +1,258 @@
+MongoDB
+-------
+    - MongoDB database is the "NoSQL" database.
+
+    - MongoDB Supports only "JSON".
+
+    - As a MongoDB Developer, we can perform "CRUD" Operations on JSON.
+
+    - MongoDB database follows the "mongodb" protocol.
+
+    - by default MongoDB database will run on port no. 27017
+
+    - mongodb database follows the "client server" architecture
+
+Installation of MongoDB
+-----------------------
+
+1) download and install MongoDB
+
+website : https://www.mongodb.com/dr/fastdl.mongodb.org/win32/mongodb-win32-x86_64-2012plus-4.2.8-signed.msi/download
+
+
+2) create the directory
+
+c:/data/db
+    - it is used to maintain the "data backup".
+
+3) set the path environemental variable
+
+    path = C:\Program Files\MongoDB\Server\4.2\bin
+
+
+****************************************************************
+SQL                                                 NoSQL
+
+tables                                              collection
+
+rows                                                document
+
+database                                            database
+****************************************************************
+
+
+
+Queries
+-------
+
+> mongod
+    - it is used to start the server
+
+    - by default server running on port no.27017
+
+> mongo
+    - we can connect to server
+
+
+> use online;
+    - automatically "online" database will be created and switches also.
+
+> db.createCollection("products");
+    - automatically "products" collection(table) will be created.
+
+> db.products.insert({"p_id":111,"p_name":"p_one","p_cost":10000});
+    - automatically json object will be inserted.
+
+> db.products.find();
+    - used to fetch the data from "products" collection.
+
+
+*********************************
+host      :   localhost
+
+protocol  :   mongodb
+
+port      :   27017
+
+database  :   online
+
+collection:   products
+*********************************
+
+
+=> create the directory (folder)
+
+Ex.
+        MongoDB_CRUD
+
+=> switch to MongoDB_CRUD
+
+        > use MongoDB_CRUD
+
+=> download the node modules
+
+        1) mongodb@2.2.32
+
+        2) express
+
+        3) body-parser
+
+        4) cors
+
+        - mongodb@2.2.32 module used to interact with mongodb database from node server
+
+        - express module used to create the rest apis
+
+                GET
+                POST
+                PUT
+                DELETE
+                HEAD
+
+        - body-parser module used to read the client data.
+
+        - cors module used to enable the ports communication.
+
+    - we will download above modules by using "yarn" tool.
+
+    > yarn add mongodb@2.2.32 express cors body-parser --save
+
+
+=> create the rest apis by using NodeJS
+
+****************************************************
+MongoDB_CRUD
+           fetch
+               fetch.js
+           insert
+                insert.js
+           update
+                update.js
+           delete
+                delete.js
+           server.js
+*************************************************
+
+    - fetch.js is used to create the GET Request (fetch the data from products collection)
+
+    - insert.js is used to create the POST Request   (insert the data into products collection)
+
+    - update.js file used to create the PUT Request   (update the data in products collection)
+
+    - delete.js file used to create the DELETE Request  (delete the data from products collection)
+
+    - server.js file is the main server file.
+
+
+=> start the node server
+
+> cd MongoDB_CRUD
+> node server
+
+
+=> test the rest apis by using Postman
+
+    1) http://localhost:8080/fetch      (GET)
+
+    2) http://localhost:8080/insert     (POST)
+
+    3) http://localhost:8080/update     (PUT)
+
+    4) http://localhost:8080/delete     (DELETE)
+
+
+Integration of CRUD Operations with Angular
+-------------------------------------------
+1) create the angular project
+
+    > ng new crudApp
+
+2) switch to angular project
+
+    > cd crudApp;
+
+3) download bootstrap
+
+    > yarn add bootstrap@3.3.7 --save
+
+    to make bootstrap available globally , we need to configure in angular.json file
+
+    angular.json
+    -------------
+
+4) create the services
+
+    => FetchService
+
+    => InsertService
+
+    => UpdateService
+
+    => DeleteService
+
+    > ng g s services/fetch --skipTests
+
+    > ng g s services/insert --skipTests
+
+    > ng g s services/update --skipTests
+
+    > ng g s services/delete --skipTests
+
+
+
+5) create the Component
+
+    > ng g c components/crud --skipTests -is --selector=crud --flat true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

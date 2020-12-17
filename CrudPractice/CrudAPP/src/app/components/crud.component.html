@@ -1,0 +1,62 @@
+
+<div class="container">
+    <button class="btn btn-outline-primary " style="margin-left:95%;" (click)="OpenModalBox(insert)" class="fas fa-plus-square success"></button>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog dialog-sm ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismissed="modal">&times;</button>
+                        
+                        <h4 class="modal-title">Add Products</h4>
+                
+
+                </div>
+                <div class="modal-body">
+                  <form>
+                      <div class="form-group">
+                          <label>P_ID:</label>
+                          <input type="number" class="form-control" placeholder="Enter Your ID..">
+                      </div>
+                      <div class="form-group">
+                          <label>P_NAME:</label>
+                          <input type="text" class="form-control" placeholder="Enter Name..">
+                      </div>
+                      <div class="form-group">
+                          <label>P_COST:</label>
+                          <input type="number" class="form-control" placeholder="Enter Cost Here..">
+                      </div>
+                  </form>
+
+                  
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success">Add</button>
+                    <button class="btn btn-danger">Cancel</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <div>
+        <table class="table table-hover table-bordered table-striped">
+             <thead>
+                 <th>Slo</th>
+                 <th>P_ID</th>
+                 <th>P_NAME</th>
+                 <th>P_COST</th>
+                 <th>EDIT</th>
+                 <th>DELETE</th>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let obj of records;let i=index">
+                     <td>{{i+1}}</td>
+                     <td>{{obj.p_id}}</td>
+                     <td>{{obj.p_name}}</td>
+                     <td>{{obj.p_cost}}</td>
+                     <td><i class="far fa-edit"></i></td>
+                     <td><i class="fas fa-trash-alt"></i></td>
+                 </tr>
+             </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="container">
+  <button class="btn btn-primary glyphicon glyphicon-plus pull-right" (click)="openModelBox('insert')">ADD</button> 
+  
+    <!--
+        Modal Popup
+    -->
+    <div class="modal fade" id="myModal" data-backdrop="false" tabindex="-1" data-keyboard="false">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Product</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>P_ID</label>
+                            <input type="number"
+                                   class="form-control"
+                                   id="p_id"
+                                   placeholder="Please Enter P_ID">
+                        </div>
+                        <div class="form-group">
+                            <label>P_NAME</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="p_name"
+                                   placeholder="Enter Product Name">
+                        </div>
+                        <div class="form-group">
+                            <label>P_COST</label>
+                            <input type="number" 
+                                   class="form-control"
+                                   id="p_cost"
+                                   placeholder="Enter Product Cost">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-sm" (click)="save()">Add</button>
+                    <button class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div> 
+  <table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr class="success">
+            <th>SNO</th>
+            <th>P_ID</th>
+            <th>P_NAME</th>
+            <th>P_COST</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of records;let count = index">
+            <td class="info">{{count+1}}</td>
+            <td class="danger">{{obj.p_id}}</td>
+            <td class="warning">{{obj.p_name}}</td>
+            <td class="active">{{obj.p_cost}}</td>
+            <td><i class="fa fa-pencil-square-o" aria-hidden="true" (click)="openModelBox('update')"></i></td>
+            <td><i class="fa fa-trash-o" aria-hidden="true" (click)="deleteRaw('obj.p_id')"></i>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>

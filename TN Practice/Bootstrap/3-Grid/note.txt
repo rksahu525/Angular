@@ -1,0 +1,8 @@
+1-in bootstrap grid sysytem divided in 12 .
+
+2- In bootstrap nearly 5 types of webpages screen(XS-extra small,Sm-small,medium-md ,large-lg, extra large-xl)
+ 
+ Classes
+ --------
+ 1-row
+ 2-col 

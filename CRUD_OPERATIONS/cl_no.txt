@@ -1,0 +1,313 @@
+CRUD Operations on All DataBases (MySQL,MongoDB,SQLServer,Oracle)
+-----------------------------------------------------------------
+1) install MySQL DataBase.
+
+    Ex.
+        mysql-essential-5.2.3-falcon-alpha-win32.msi
+
+2) create the database in MySQL.
+
+Queries:
+    Default Password : root
+
+    > show databases;
+        - it will show available databases.
+
+    > create schema crud;
+        - crud database will be created.
+
+    > use crud;
+        - we can switch to crud database.
+
+    > create table products(p_id integer,p_name varchar(20),p_cost integer);
+        - automatically products table will be created.
+
+    > insert into products values(111,'p_one',10000);
+        - automatically we can insert the record into database.
+
+    > select * from products;
+        - we can fetch the records from database.
+
+**********************************************
+host     :   localhost
+
+user     :   root
+
+password :   root
+
+database :   crud
+
+table    :   products
+********************************************
+
+
+
+
+3) create the directory
+
+    Ex.
+        MySQL_CRUD
+
+4) switch to MySQL_CRUD
+
+    > cd MySQL_CRUD
+
+
+5) download the node modules
+
+    => mysql
+
+    => cors
+
+    => body-parser
+
+    => express
+
+    - express module used to develop the rest apis.
+            GET
+            POST
+            PUT
+            DELETE
+            HEAD
+            ----
+            ----
+            ----
+    - cors module used to enable the ports communication.
+
+    - body-parser module used to read the client data.
+
+    - mysql module used to interact with the mysql database.
+
+    > yarn add mysql cors body-parser express --save
+
+
+
+6) develop the rest apis by using NodeJS
+
+    => GET     (Fetch the records from database)
+
+    => POST    (Insert the record into database)
+
+    => PUT     (Update the record in database)
+
+    => DELETE  (Delete the record from database)
+
+**************************************
+MySQL_CRUD
+         config
+              db_properties.js
+              db_connection.js
+
+         fetch
+            fetch.js
+
+         insert
+            insert.js
+
+         update
+            update.js
+
+         delete
+            delete.js
+
+        server.js
+***************************************
+
+    - "db_properties.js" file used to maintain the database details.
+    - "db_connection.js" file used to create and return the connection object.
+    - "fetch.js" file used to create the GET Request. (fetch the data from products table).
+    - "insert.js" file used to create the POST Request (insert the record into products table).
+    - "update.js" file used to create the PUT Request (update the record into products table).
+    - "delete.js" file used to create the DELETE Request (delete the record from products table).
+
+
+7) start the node server
+
+    > cd MySQL_CRUD
+
+    > node server
+
+8) test the rest apis by using Postman.
+
+    => http://localhost:8080/fetch          (GET)
+
+    => http://localhost:8080/insert         (POST)
+
+    => http://localhost:8080/update         (PUT)
+
+    => http://localhost:8080/delete         (DELETE)
+
+
+MongoDB CRUD Operations
+-----------------------
+1) create the directory
+
+    MongoDB_CRUD
+
+2) switch to MongoDB_CRUD
+
+    > cd MongoDB_CRUD
+
+3) create the database
+
+    > mongod
+        - start the server
+    
+    > mongo
+        - we will connect to server 
+
+    > use crud;
+        - automatically crud database will be created.
+
+    > db.createCollection("products");
+        - products collection will be created
+
+    > db.products.insert({"p_id":111,
+                          "p_name":"p_one",
+                          "p_cost":10000});
+        - we can insert object into products collection.
+
+    > db.products.find();
+        - we can fetch the data from products collection.
+
+********************************************
+host   :   localhost
+
+port   :   27017
+
+protocol  :  mongodb
+
+database  :   crud
+
+collection  :   products
+********************************************
+
+
+4) download the node modules
+
+    => express
+
+    => mongodb@2.2.32
+
+    => cors
+
+    => body-parser
+
+
+    - "express" module used to develop the rest apis.
+            GET
+            POST
+            PUT
+            DELETE
+
+    - "mongodb@2.2.32" module used to interact with the mongodb database.
+
+    - "cors" module used to enable the ports communication.
+
+    - "body-parser" module used to read the client data.
+
+    > yarn add express mongodb@2.2.32 cors body-parser --save
+
+
+5) develop the rest apis by using NodeJS
+
+*************************************
+MongoDB_CRUD
+           fetch
+               fetch.js
+           insert
+               insert.js
+           update
+               update.js
+           delete
+               delete.js
+           server.js
+*************************************
+
+    -  fetch.js file used to create the GET Request (fetch the data from products collection)
+
+    - insert.js file used to create the POST Request  (insert the record into products collection)
+
+    - update.js file used to create the PUT Request   (update the record present in products collection)
+
+    - delete.js file used to create the DELETE Request (delete the record from products collection)
+
+    - server.js file used to collabrate the modules.
+
+6) start the server
+
+    > node server
+
+
+7) test the rest apis by using Postman
+
+    => http://localhost:8080/fetch   (GET)
+
+    => http://localhost:8080/insert  (POST)
+
+    => http://localhost:8080/update  (PUT)
+
+    => http://localhost:8080/delete  (DELETE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

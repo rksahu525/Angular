@@ -1,0 +1,55 @@
+***Variable
+--------
+1- it is used to store the data.
+2- By Using variable we store the any type of data Like..
+    a-String
+    b-number
+    c-boolean
+    d-array
+    e-object
+    f-symbole
+    g-bigint   (suffix with n we can assign value)
+
+***ARRAY
+--------
+1-Collection of Indexed and hetrogeneus element called as Array.
+2- we will iterate the array by using for(),forEach(),for ..of etc.
+
+***JSON
+--------
+1- Json Stands for javascript object notation.
+2- Json Used to Transfer the data over the network
+
+***Symbole()
+----------
+1-it is used to maintain sequerity of data.
+
+***== and ===
+-----------
+
+
+
+**Undefined And Null
+--------------------
+
+
+
+**CONST
+--------
+1-it is introduced in ES_6
+2-Reassignment not possible but can change internal data.
+
+
+**let
+--------
+it is introduced in ES-6
+its obey the scope rule.
+3-its overcome the global polluting Issue.
+
+**Var
+-------
+var keyword breaks the scope rule.
+
+
+
+

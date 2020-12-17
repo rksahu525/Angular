@@ -1,0 +1,41 @@
+HTML BASICS
+-----------
+> Html standfs for Hyper Text Markup Language
+> Html given by W3c
+> Current Version is Html5
+> Html Used to Devlop the static WebPages.
+> We will convert the static page to dynamic by Using Js , Angular, rect etc.
+> We will save the html files By Using .html tag.
+> recomended IDE to webpages is Visual Studiop Code(By Microsoft).
+
+
+
+BASIC STRUCTURE:
+---------------
+1- DOCTTYPE > To Inform Which Version Used
+2- HEAD     > To Provide META data.(Data About Data is Called META data)
+3- BODY     > To Provide Main Content Of The Wbpages.
+
+
+
+TAGS
+-------
+1) <html> ...... </html>
+
+2) <head>....... </head>
+
+3)<body> ....... </body>
+
+4)<title>...... </title>
+ 
+5)<p>
+
+6) <h1> to <h6>
+
+7) <style>
+8) <script>
+9) <table>
+10)<div>
+......etc...
+
+

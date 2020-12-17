@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>skip loop counter</title>
+        <script>
+            var products=[
+                {catagory:"Electronics", item:["TV","MOBILES"]},
+                {catagory:"Shoes", item:["NIKE","LEE COOPPER"]}
+
+            ];
+            function bodyload(){
+                var list=document.getElementById("list");
+                for(var i=0; i<products.length;i++){
+                    var li=document.createElement("li");
+                    li.innerHTML=products[i].catagory;
+                    list.appendChild(li);
+                    for(var j=0;j<products[i].item.length;j++){
+                        var nestedli=document.createElement("li");
+                        nestedli.innerHTML=products[i].item[j];
+                        ul=document.createElement("ul");
+                        ul.appendChild(nestedli);
+                        li.appendChild(ul);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <ol id="list">
+
+        </ol>
+    </body>
+</html>
